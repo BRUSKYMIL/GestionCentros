@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class Alumno {
-    String id_alumno = "ALUM0001";
+    String prefijo_id = "ALUM";
+    int numero_id;
+    String id_alumno;
     String nombre_alumno;
     String primer_apellido;
     String segundo_apellido;
@@ -14,6 +16,7 @@ public class Alumno {
     }
 
     private String generarIdAlumno() {
+    	
         return id_alumno;
     }
 
@@ -44,26 +47,32 @@ public class Alumno {
     public String getCicloAlumno() {
         return nombre_ciclo;
     }
-    
-    
-    public void agregarAlumno() {
-        Scanner teclado = new Scanner(System.in);
 
-        System.out.print("Nombre del alumno: ");
-        this.nombre_alumno = teclado.nextLine();
-        System.out.print("Primer apellido: ");
-        this.primer_apellido = teclado.nextLine();
-        System.out.print("Segundo apellido: ");
-        this.segundo_apellido = teclado.nextLine();
-        System.out.print("Teléfono: ");
-        this.tlf = teclado.nextInt();
-        teclado.nextLine();
-        System.out.print("Email: ");
-        this.email = teclado.nextLine();
-        System.out.print("NIF/NIE: ");
-        this.ni = teclado.nextLine();
-        System.out.print("Nombre del ciclo (opcional): ");
-        this.nombre_ciclo = teclado.nextLine();
-        
-    }
+	public void setNombre(String nextLine) {
+		this.nombre_alumno = nextLine;
+	}
+
+	public void setPrimerApellido(String nextLine) {
+		this.primer_apellido = nextLine;
+	}
+
+	public void setSegundoApellido(String nextLine) {
+		this.segundo_apellido = nextLine;
+	}
+
+	public void setTlf(int nextInt) {
+		this.tlf = nextInt;
+	}
+
+	public void setEmail(String nextLine) {
+		this.email = nextLine;
+	}
+
+	public void setNi(String nextLine) {
+		this.ni = nextLine;
+	}
+
+	public void setNombre_ciclo(String nextLine) {
+		this.nombre_ciclo = nextLine;
+	}
 }
